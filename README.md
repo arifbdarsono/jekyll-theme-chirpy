@@ -43,6 +43,34 @@
 
 To learn how to use, develop, and upgrade the project, please refer to the [Wiki][wiki].
 
+## Deployment
+
+This repository is configured for automatic deployment to Netlify. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed setup instructions.
+
+### Quick Start for Netlify Deployment
+
+1. Fork this repository
+2. Create a Netlify account and connect your GitHub repository
+3. Set up the required environment variables in GitHub Secrets:
+   - `NETLIFY_AUTH_TOKEN`
+   - `NETLIFY_SITE_ID`
+4. Push to the `master` branch to trigger automatic deployment
+
+### Local Development
+
+Run the development server:
+
+```bash
+# Quick start
+./scripts/dev.sh
+
+# Or manually
+bundle install
+npm install
+npm run build
+bundle exec jekyll serve
+```
+
 ## Contributing
 
 Contributions (_pull requests_, _issues_, and _discussions_) are what make the open-source community such an amazing place
